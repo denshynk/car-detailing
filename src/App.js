@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+
+import Header from "./components/Header";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="main">
+			<Header />
+			<div className="mainpage">
+				<div className="centerBox">
+					<p>Отримайте більше задоволення від Вашого авто разом з VVC</p>
+					<h1>СУЧАСНА ДIТЕЙЛIНГ СТУДIЯ!</h1>
+				</div>
+			</div>
+			<div className="secondpage">
+				<div></div>
+			</div>
+			<div className="footer"></div>
+		</div>
+	);
 }
 
 export default App;
