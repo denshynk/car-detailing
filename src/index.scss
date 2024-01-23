@@ -34,6 +34,7 @@ code {
 }
 
 .header {
+	z-index: 2;
 	flex-direction: column;
 	display: flex;
 	position: fixed;
@@ -52,7 +53,6 @@ code {
 		padding-left: 5vh;
 		padding-right: 5vh;
 		height: auto;
-		
 	}
 
 	a {
@@ -64,6 +64,21 @@ code {
 		margin: 0;
 		font-family: "Urbanist";
 		text-decoration: none;
+		text-shadow: 5px 5px 20px #455dc9;
+		animation: blink-animation 0.1s infinite;
+	}
+	@keyframes blink-animation {
+		0% {
+			opacity: 1;
+		}
+
+		50% {
+			opacity: 0.85;
+		}
+
+		100% {
+			opacity: 1;
+		}
 	}
 	.contact {
 		display: flex;
@@ -78,7 +93,7 @@ code {
 		padding: auto;
 		font-family: "Urbanist", sans-serif;
 		a {
-			font-size: 1.15vw;
+			font-size: 1.1vw;
 			color: #ffffff;
 			text-decoration: none;
 			transition: color 0.2s ease-in-out, text-transform 0.2s ease-in-out,
@@ -152,7 +167,7 @@ code {
 			font-size: 57px;
 			flex-grow: 3;
 			text-shadow: 5px 5px 20px #c94594;
-			animation: blink-animation 0.00001s infinite;
+			animation: blink-animation 0.1s infinite;
 		}
 		@keyframes blink-animation {
 			0% {
@@ -160,7 +175,7 @@ code {
 			}
 
 			50% {
-				opacity: 0.78;
+				opacity: 0.85;
 			}
 
 			100% {
@@ -173,13 +188,15 @@ code {
 			font-size: 18px;
 			font-weight: lighter;
 			text-shadow: 5px 5px 20px #c94594;
-			animation: blink-animation 0.00001s infinite;
 		}
-		
 	}
 }
 
 .secondpage {
+	flex-direction: column;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
 	height: 100vh;
 	width: 100%;
 	background: linear-gradient(7deg, #ffffff, #d3dde2);
@@ -189,6 +206,18 @@ code {
 	-moz-animation: AnimationName 0s ease infinite;
 	-o-animation: AnimationName 0s ease infinite;
 	animation: AnimationName 0s ease infinite;
+
+	.pageSlice {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		h1 {
+			font-family: "Porshe";
+			font-size: 40px;
+		}
+		img {
+		}
+	}
 }
 
 @-webkit-keyframes AnimationName {
@@ -234,4 +263,14 @@ code {
 	100% {
 		background-position: 0% 88%;
 	}
+}
+
+.image-container {
+	position: relative;
+	right: -100%;
+	transition: right 2s ease;
+}
+
+.image-container.show {
+	right: -10%;
 }

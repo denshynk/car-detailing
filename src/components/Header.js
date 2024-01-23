@@ -16,13 +16,19 @@ function Header(props) {
 		}
 	};
 
+	const hadleClickHome = () => {
+		setIsActiveLink(null);
+		window.scrollTo(0, 0);
+		setPage(false);
+	};
+
 	const handleLinkClickInside = (link) => {
 		setIsActiveLinkInside(link);
 	};
 	return (
 		<div className="header">
 			<div className="stuctureHeader">
-				<Link to="" onClick={() => handleLinkClick(null)}>
+				<Link to="" onClick={() => hadleClickHome()}>
 					<h1 className="animate__animated animate__flash">LOGO</h1>
 				</Link>
 				<div className="d-flex flex-column w100p justify-around ">
