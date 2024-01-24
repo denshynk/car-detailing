@@ -61,35 +61,35 @@ function Header(props) {
 								to="/pogonag"
 								onClick={() => handleLinkClick("/pogonag")}
 							>
-								Захист від викрадення
+								Захист вiд викрадення
 							</Link>
 							<Link
 								className={isActiveLink === "/sedfsd" ? "active" : ""}
 								to="/sedfsd"
 								onClick={() => handleLinkClick("/sedfsd")}
 							>
-								Шумо- вібро ізоляція
+								Шумо- вiбро iзоляцiя
 							</Link>
 							<Link
 								className={isActiveLink === "/pogofsedfnag" ? "active" : ""}
 								to="/pogofsedfnag"
 								onClick={() => handleLinkClick("/pogofsedfnag")}
 							>
-								Захисна плівка і тонування
+								Захисна плiвка i тонування
 							</Link>
 							<Link
 								className={isActiveLink === "/pogsdfonag" ? "active" : ""}
 								to="/pogsdfonag"
 								onClick={() => handleLinkClick("/pogsdfonag")}
 							>
-								Детейлінг
+								Детейлiнг
 							</Link>
 							<Link
 								className={isActiveLink === "/posafsedgonag" ? "active" : ""}
 								to="/posafsedgonag"
 								onClick={() => handleLinkClick("/posafsedgonag")}
 							>
-								Додаткові послуги
+								Додатковi послуги
 							</Link>
 						</div>
 					</div>
@@ -105,7 +105,7 @@ function Header(props) {
 							to="/pog32432423onag"
 							onClick={() => handleLinkClickInside("/pog32432423onag")}
 						>
-							Захист від викрадення
+							Захист вiд викрадення
 						</Link>
 						<Link
 							className={
@@ -114,7 +114,7 @@ function Header(props) {
 							to="/sed2342342fsd"
 							onClick={() => handleLinkClickInside("/sed2342342fsd")}
 						>
-							Шумо- вібро ізоляція
+							Шумо- вiбро iзоляцiя
 						</Link>
 						<Link
 							className={
@@ -123,7 +123,7 @@ function Header(props) {
 							to="/pogofse3242423dfnag"
 							onClick={() => handleLinkClickInside("/pogofse3242423dfnag")}
 						>
-							Захисна плівка і тонування
+							Захисна плiвка i тонування
 						</Link>
 						<Link
 							className={
@@ -132,7 +132,7 @@ function Header(props) {
 							to="/pogsd223423fonag"
 							onClick={() => handleLinkClickInside("/pogsd223423fonag")}
 						>
-							Детейлінг
+							Детейлiнг
 						</Link>
 						<Link
 							className={
@@ -141,7 +141,7 @@ function Header(props) {
 							to="/posaf23424sedgonag"
 							onClick={() => handleLinkClickInside("/posaf23424sedgonag")}
 						>
-							Додаткові послуги
+							Додатковi послуги
 						</Link>
 					</div>
 				</div>

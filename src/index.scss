@@ -19,6 +19,11 @@
 	src: url("../public/fonts/Porsche Regular_0.ttf");
 }
 
+@font-face {
+	font-family: "Lord";
+	src: url("../public/fonts/Lordcorps.ttf");
+}
+
 body {
 	margin: 0;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -46,7 +51,7 @@ code {
 		rgba(87, 112, 176, 0)
 	);
 	width: 100%;
-	height: 50vh;
+	height: 20vh;
 
 	.stuctureHeader {
 		display: flex;
@@ -91,7 +96,8 @@ code {
 		display: flex;
 		justify-content: space-between;
 		padding: auto;
-		font-family: "Urbanist", sans-serif;
+		font-family: "Lord";
+		letter-spacing: 0.05rem;
 		a {
 			font-size: 1.1vw;
 			color: #ffffff;
@@ -107,12 +113,19 @@ code {
 			font-size: 1.3vw;
 			stroke-width: 400;
 		}
+		:hover {
+			color: #c94594;
+			text-shadow: 5px 5px 20px rgb(126, 33, 49);
+			text-transform: uppercase;
+			font-size: 1.3vw;
+			stroke-width: 400;
+		}
 	}
 	.containerAch2 {
 		width: 90%;
 		display: flex;
 		justify-content: space-around;
-		font-family: "Urbanist", sans-serif;
+		font-family: "Lord";
 		a {
 			font-size: 1.1vw;
 			text-align: center;
@@ -126,6 +139,13 @@ code {
 			text-shadow: 5px 5px 20px rgb(126, 33, 49);
 			text-transform: uppercase;
 			font-size: 1.2vw;
+			stroke-width: 400;
+		}
+		:hover {
+			color: #c94594;
+			text-shadow: 5px 5px 20px rgb(126, 33, 49);
+			text-transform: uppercase;
+			font-size: 1.3vw;
 			stroke-width: 400;
 		}
 	}
@@ -143,6 +163,7 @@ code {
 	align-items: center;
 	position: static;
 	.centerBox {
+		backdrop-filter: blur(1px);
 		flex-direction: column;
 		text-align: center;
 		position: absolute;
@@ -215,7 +236,251 @@ code {
 			font-family: "Porshe";
 			font-size: 40px;
 		}
-		img {
+	}
+}
+
+.thirdpage {
+	height: 100vh;
+	width: 100%;
+	background-image: url("../public/img/audir8.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover; /* This line ensures the image covers the entire container, cropping as needed */
+	background-position: center; /* This line centers the image within the container */
+	display: flex;
+	position: relative;
+
+	.Box {
+		position: absolute;
+		top: 20%;
+		left: 140px;
+		width: 50%;
+		padding-inline: 20px;
+		flex-direction: column;
+		display: flex;
+		color: white;
+		border-radius: 20px;
+		backdrop-filter: blur(2px);
+		background: rgba(0, 0, 0, 0.616);
+
+		justify-content: flex-start;
+		h1 {
+			font-family: "Porshe";
+			font-size: 50px;
+			text-wrap: wrap;
+		}
+		p {
+			font-size: large;
+		}
+	}
+}
+
+.LastPagepage {
+	height: 100vh;
+	width: 100%;
+	.CallBackBlock {
+		width: 100%;
+		height: 70vh;
+		background-image: url("../public/img/jaguar.png");
+		background-repeat: no-repeat;
+		background-size: cover; /* This line ensures the image covers the entire container, cropping as needed */
+		background-position: center; /* This line centers the image within the container */
+		display: flex;
+		position: relative;
+		.Box {
+			position: absolute;
+			left: 60%;
+			width: 30%;
+			height: 100%;
+			padding-inline: 20px;
+			flex-direction: column;
+			display: flex;
+			color: white;
+			backdrop-filter: blur(2px);
+			background: rgba(0, 0, 0, 0.616);
+			justify-content: center;
+			align-items: center;
+			z-index: 1000;
+			.form__group {
+				margin-top: 20px;
+				z-index: 10;
+				position: relative;
+				padding: 20px 0 0;
+				width: 100%;
+				max-width: 350px;
+			}
+
+			.form__field {
+				font-family: inherit;
+				width: 100%;
+				border: none;
+				border-bottom: 2px solid #9b9b9b;
+				outline: 0;
+				font-size: 17px;
+				color: #fff;
+				padding: 7px 0;
+				background: transparent;
+				transition: border-color 0.2s;
+			}
+
+			.form__field::placeholder {
+				color: transparent;
+			}
+
+			.form__field:placeholder-shown ~ .form__label {
+				font-size: 17px;
+				cursor: text;
+				top: 20px;
+			}
+
+			.form__label {
+				position: absolute;
+				top: 0;
+				display: block;
+				transition: 0.2s;
+				font-size: 17px;
+				color: #9b9b9b;
+				pointer-events: none;
+			}
+
+			.form__field:focus {
+				padding-bottom: 6px;
+				font-weight: 700;
+				border-width: 3px;
+				border-image: linear-gradient(to right, #116399, #38caef);
+				border-image-slice: 1;
+			}
+
+			.form__field:focus ~ .form__label {
+				position: absolute;
+				top: 0;
+				display: block;
+				transition: 0.2s;
+				font-size: 17px;
+				color: #38caef;
+				font-weight: 700;
+			}
+
+			/* reset input */
+			.form__field:required,
+			.form__field:invalid {
+				box-shadow: none;
+			}
+			.btn {
+				margin-top: 30px;
+				--border-color: linear-gradient(-45deg, #ffae00, #7e03aa, #00fffb);
+				--border-width: 0.125em;
+				--curve-size: 0.5em;
+				--blur: 30px;
+				--bg: #080312;
+				--color: #afffff;
+				color: var(--color);
+				/* use position: relative; so that BG is only for .btn */
+				position: relative;
+				isolation: isolate;
+				display: inline-grid;
+				place-content: center;
+				padding: 0.5em 5.5em;
+				font-size: 17px;
+				border: 0;
+				text-transform: uppercase;
+				box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+				clip-path: polygon(
+					/* Top-left */ 0% var(--curve-size),
+					var(--curve-size) 0,
+					/* top-right */ 100% 0,
+					100% calc(100% - var(--curve-size)),
+					/* bottom-right 1 */ calc(100% - var(--curve-size)) 100%,
+					/* bottom-right 2 */ 0 100%
+				);
+				transition: color 250ms;
+			}
+
+			.btn::after,
+			.btn::before {
+				content: "";
+				position: absolute;
+				inset: 0;
+			}
+
+			.btn::before {
+				background: var(--border-color);
+				background-size: 300% 300%;
+				animation: move-bg7234 5s ease infinite;
+				z-index: -2;
+			}
+
+			@keyframes move-bg7234 {
+				0% {
+					background-position: 31% 0%;
+				}
+
+				50% {
+					background-position: 70% 100%;
+				}
+
+				100% {
+					background-position: 31% 0%;
+				}
+			}
+
+			.btn::after {
+				background: var(--bg);
+				z-index: -1;
+				clip-path: polygon(
+					/* Top-left */ var(--border-width)
+						calc(var(--curve-size) + var(--border-width) * 0.5),
+					calc(var(--curve-size) + var(--border-width) * 0.5)
+						var(--border-width),
+					/* top-right */ calc(100% - var(--border-width)) var(--border-width),
+					calc(100% - var(--border-width))
+						calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+					/* bottom-right 1 */
+						calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+						calc(100% - var(--border-width)),
+					/* bottom-right 2 */ var(--border-width)
+						calc(100% - var(--border-width))
+				);
+				transition: clip-path 500ms;
+			}
+
+			.btn:where(:hover, :focus)::after {
+				clip-path: polygon(
+					/* Top-left */ calc(100% - var(--border-width))
+						calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+					calc(100% - var(--border-width)) var(--border-width),
+					/* top-right */ calc(100% - var(--border-width)) var(--border-width),
+					calc(100% - var(--border-width))
+						calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+					/* bottom-right 1 */
+						calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+						calc(100% - var(--border-width)),
+					/* bottom-right 2 */
+						calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+						calc(100% - var(--border-width))
+				);
+				transition: 200ms;
+			}
+
+			.btn:where(:hover, :focus) {
+				color: #fff;
+			}
+		}
+	}
+	.footer {
+		width: 100%;
+		height: 30vh;
+		background-image: url("../public/img/HotRods.jpg");
+		background-repeat: no-repeat;
+		background-size: cover; /* This line ensures the image covers the entire container, cropping as needed */
+		background-position: center; /* This line centers the image within the container */
+		display: flex;
+		position: relative;
+		.Box {
+			position: absolute;
+			backdrop-filter: blur(2px);
+			background: rgba(0, 0, 0, 0.575);
+			width: 100%;
+			height: 100%;
 		}
 	}
 }
@@ -273,4 +538,76 @@ code {
 
 .image-container.show {
 	right: -10%;
+}
+.image-container::before {
+	right: 100%;
+}
+.line {
+	position: absolute;
+	width: 2px;
+	border-left: 2px dashed #7468e0;
+	opacity: 0;
+	transition: opacity 3.5s ease;
+	div {
+		position: absolute;
+		background-color: #455dc9;
+		transform: translateX(-50%);
+		height: 45px;
+		width: 260px;
+		text-align: center;
+		border-radius: 20px;
+		color: #ffffff;
+		h2 {
+			font-family: "Porshe";
+			font-size: medium;
+			letter-spacing: 0.2rem;
+		}
+		.h22 {
+			transform: translateY(-20%);
+		}
+	}
+}
+
+.line.show {
+	opacity: 1;
+}
+
+.line1 {
+	left: 10%;
+	top: 100px;
+	height: 40%;
+	transition-delay: 0.4s;
+	width: 100px;
+}
+
+.line2 {
+	top: 50px;
+	left: 30%;
+	height: 50%;
+	transition-delay: 0.6s;
+}
+
+.line3 {
+	top: 40px;
+	left: 50%;
+	height: 50%;
+	transition-delay: 0.8s;
+}
+
+.line4 {
+	top: 60px;
+	left: 70%;
+	height: 40%;
+	transition-delay: 1s;
+}
+.line::after {
+	content: ""; /* Пустой элемент для точки */
+	position: absolute;
+	width: 15px; /* Ширина точки */
+	height: 15px; /* Высота точки */
+	background-color: #7468e0; /* Цвет точки */
+	border-radius: 50%; /* Делаем точку круглой */
+	left: 0; /* Располагаем точку в конце линии */
+	top: 100%; /* Смещаем точку вниз на 100% высоты линии */
+	transform: translateX(-50%); /* Центрируем точку по горизонтали */
 }
