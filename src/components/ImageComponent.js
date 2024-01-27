@@ -1,25 +1,25 @@
 // ImageComponent.js
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+import { FullpageContext } from "@ap.cx/react-fullpage";
 
 const ImageComponent = () => {
 	const [showImage, setShowImage] = useState(false);
 	const [showLines, setShowLines] = useState(false);
 
-	const handleScroll = () => {
-		const scrollPosition = window.scrollY;
-		const startScroll = 0;
-		setShowImage(scrollPosition > startScroll);
-		setTimeout(() => {
-			setShowLines(scrollPosition > startScroll);
-		}, 2000);
-	};
+	const fullpageContext = useContext(FullpageContext);
+	const currentSlideNumber = fullpageContext?.number || 0;
 
 	useEffect(() => {
-		window.addEventListener("scroll", handleScroll);
-		return () => {
-			window.removeEventListener("scroll", handleScroll);
-		};
-	}, []);
+		if (currentSlideNumber === 1) {
+			setShowImage(true);
+			setTimeout(() => {
+				setShowLines(true);
+			}, 2000);
+		} else {
+			setShowImage(false);
+			setShowLines(false);
+		}
+	}, [currentSlideNumber]);
 
 	return (
 		<div className={`image-container ${showImage ? "show" : ""}`}>
@@ -40,7 +40,9 @@ const ImageComponent = () => {
 					</div>
 				</div>
 				<div className={`line line4${showLines ? " show" : ""}`}>
-					<div className="lineText"><h2 className="h22">Шумо-вiбро iзоляція </h2></div>
+					<div className="lineText">
+						<h2 className="h22">Шумо-вiбро iзоляція </h2>
+					</div>
 				</div>
 			</>
 

@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 import React from "react";
 
+
 function Header(props) {
 	const [page, setPage] = React.useState(false);
 	const [isActiveLink, setIsActiveLink] = React.useState(null);
 	const [isActiveLinkInside, setIsActiveLinkInside] = React.useState(null);
+
 
 	const handleLinkClick = (link) => {
 		setIsActiveLink(link);
@@ -19,7 +21,8 @@ function Header(props) {
 	const hadleClickHome = () => {
 		setIsActiveLink(null);
 		window.scrollTo(0, 0);
-		setPage(false);
+		setPage(null);
+		setIsActiveLinkInside(null);
 	};
 
 	const handleLinkClickInside = (link) => {
@@ -28,7 +31,7 @@ function Header(props) {
 	return (
 		<div className="header">
 			<div className="stuctureHeader">
-				<Link to="" onClick={() => hadleClickHome()}>
+				<Link to="/" onClick={() => hadleClickHome()}>
 					<h1 className="animate__animated animate__flash">LOGO</h1>
 				</Link>
 				<div className="d-flex flex-column w100p justify-around ">
@@ -85,11 +88,11 @@ function Header(props) {
 								Детейлiнг
 							</Link>
 							<Link
-								className={isActiveLink === "/posafsedgonag" ? "active" : ""}
-								to="/posafsedgonag"
-								onClick={() => handleLinkClick("/posafsedgonag")}
+								className={isActiveLink === "/galery" ? "active" : ""}
+								to="/galery"
+								onClick={() => handleLinkClick("/galery")}
 							>
-								Додатковi послуги
+								Галерея
 							</Link>
 						</div>
 					</div>
@@ -105,7 +108,7 @@ function Header(props) {
 							to="/pog32432423onag"
 							onClick={() => handleLinkClickInside("/pog32432423onag")}
 						>
-							Захист вiд викрадення
+							Системи захисту вiд угону з GPS/. GSM
 						</Link>
 						<Link
 							className={
@@ -114,7 +117,7 @@ function Header(props) {
 							to="/sed2342342fsd"
 							onClick={() => handleLinkClickInside("/sed2342342fsd")}
 						>
-							Шумо- вiбро iзоляцiя
+							Системи захисту з автозапуском
 						</Link>
 						<Link
 							className={
@@ -123,7 +126,7 @@ function Header(props) {
 							to="/pogofse3242423dfnag"
 							onClick={() => handleLinkClickInside("/pogofse3242423dfnag")}
 						>
-							Захисна плiвка i тонування
+							Системи автомобiльного захисту з двох стороннiм зв'язком
 						</Link>
 						<Link
 							className={
@@ -132,7 +135,7 @@ function Header(props) {
 							to="/pogsd223423fonag"
 							onClick={() => handleLinkClickInside("/pogsd223423fonag")}
 						>
-							Детейлiнг
+							Системи автомобiльноi сигналiзацii без двох стороннього зв'язку
 						</Link>
 						<Link
 							className={
@@ -141,7 +144,7 @@ function Header(props) {
 							to="/posaf23424sedgonag"
 							onClick={() => handleLinkClickInside("/posaf23424sedgonag")}
 						>
-							Додатковi послуги
+							iмобiлайзери
 						</Link>
 					</div>
 				</div>
