@@ -5,10 +5,10 @@ import { FullpageContext } from "@ap.cx/react-fullpage";
 function Header(props) {
 	const [page, setPage] = React.useState(false);
 	const [isActiveLink, setIsActiveLink] = React.useState(null);
-	const [isActiveLinkInside, setIsActiveLinkInside] = React.useState(null);
+	// const [isActiveLinkInside, setIsActiveLinkInside] = React.useState(null);
 
-	const fullpageContext = React.useContext(FullpageContext);
-	const currentSlideNumber = fullpageContext?.number || 0;
+	// const fullpageContext = React.useContext(FullpageContext);
+	// const currentSlideNumber = fullpageContext?.number || 0;
 
 	const handleLinkClick = (link) => {
 		setIsActiveLink(link);
@@ -16,7 +16,7 @@ function Header(props) {
 			setPage(true);
 		} else {
 			setPage(false);
-			setIsActiveLinkInside(null);
+			// setIsActiveLinkInside(null);
 		}
 	};
 
@@ -24,12 +24,12 @@ function Header(props) {
 		setIsActiveLink(null);
 		window.scrollTo(0, 0);
 		setPage(null);
-		setIsActiveLinkInside(null);
+		// setIsActiveLinkInside(null);
 	};
 
-	const handleLinkClickInside = (link) => {
-		setIsActiveLinkInside(link);
-	};
+	// const handleLinkClickInside = (link) => {
+	// 	setIsActiveLinkInside(link);
+	// };
 
 	return (
 		<div className="header">
@@ -106,7 +106,7 @@ function Header(props) {
 					</div>
 				</div>
 			</div>
-			{page && (
+			{/* {page && (
 				<div className=" d-flex justify-center ">
 					<div className="containerAch2 animate__animated animate__fadeInDown">
 						<Link
@@ -156,7 +156,7 @@ function Header(props) {
 						</Link>
 					</div>
 				</div>
-			)}
+			)} */}
 		</div>
 	);
 }
