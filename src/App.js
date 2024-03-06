@@ -14,6 +14,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 import Header from "./components/Header";
 import Home from "./pages/Home";
+import Save from "./pages/Save";
 import Galery from "./pages/Galery";
 import Footer from "./components/Footer";
 
@@ -53,6 +54,20 @@ function App() {
 										transition={{ duration: 0.5 }}
 									>
 										<Home />
+									</motion.div>
+								}
+							/>
+							<Route
+								path="/save"
+								element={
+									<motion.div
+										key="save"
+										initial={{ opacity: 0, x: "100%" }}
+										animate={{ opacity: 1, x: "0%" }}
+										exit={{ opacity: 0, x: "-100%" }}
+										transition={{ duration: 0.5 }}
+									>
+										<Save />
 									</motion.div>
 								}
 							/>

@@ -1,16 +1,18 @@
 import { Link } from "react-router-dom";
 import React from "react";
-
+import { FullpageContext } from "@ap.cx/react-fullpage";
 
 function Header(props) {
 	const [page, setPage] = React.useState(false);
 	const [isActiveLink, setIsActiveLink] = React.useState(null);
 	const [isActiveLinkInside, setIsActiveLinkInside] = React.useState(null);
 
+	const fullpageContext = React.useContext(FullpageContext);
+	const currentSlideNumber = fullpageContext?.number || 0;
 
 	const handleLinkClick = (link) => {
 		setIsActiveLink(link);
-		if (link === "/pogonag") {
+		if (link === "/save") {
 			setPage(true);
 		} else {
 			setPage(false);
@@ -28,11 +30,17 @@ function Header(props) {
 	const handleLinkClickInside = (link) => {
 		setIsActiveLinkInside(link);
 	};
+
 	return (
 		<div className="header">
 			<div className="stuctureHeader">
 				<Link to="/" onClick={() => hadleClickHome()}>
-					<h1 className="animate__animated animate__flash">LOGO</h1>
+					<img
+						src="/img/Logo/ASC_logo_бiлий_на_прозорому_фонi.svg"
+						className="animate__animated animate__flash"
+						alt="Logo"
+						width={"100px"}
+					/>
 				</Link>
 				<div className="d-flex flex-column w100p justify-around ">
 					<div className="d-flex justify-end ">
@@ -60,30 +68,30 @@ function Header(props) {
 					<div className=" d-flex justify-end ">
 						<div className="containerAch">
 							<Link
-								className={isActiveLink === "/pogonag" ? "active" : ""}
-								to="/pogonag"
-								onClick={() => handleLinkClick("/pogonag")}
+								className={isActiveLink === "/save" ? "active" : ""}
+								to="/save"
+								onClick={() => handleLinkClick("/save")}
 							>
 								Захист вiд викрадення
 							</Link>
 							<Link
-								className={isActiveLink === "/sedfsd" ? "active" : ""}
-								to="/sedfsd"
-								onClick={() => handleLinkClick("/sedfsd")}
+								className={isActiveLink === "/izolatsiya" ? "active" : ""}
+								to="/izolatsiya"
+								onClick={() => handleLinkClick("/izolatsiya")}
 							>
 								Шумо- вiбро iзоляцiя
 							</Link>
 							<Link
-								className={isActiveLink === "/pogofsedfnag" ? "active" : ""}
-								to="/pogofsedfnag"
-								onClick={() => handleLinkClick("/pogofsedfnag")}
+								className={isActiveLink === "/plivka" ? "active" : ""}
+								to="/plivka"
+								onClick={() => handleLinkClick("/plivka")}
 							>
 								Захисна плiвка i тонування
 							</Link>
 							<Link
-								className={isActiveLink === "/pogsdfonag" ? "active" : ""}
-								to="/pogsdfonag"
-								onClick={() => handleLinkClick("/pogsdfonag")}
+								className={isActiveLink === "/detailing" ? "active" : ""}
+								to="/detailing"
+								onClick={() => handleLinkClick("/detailing")}
 							>
 								Детейлiнг
 							</Link>

@@ -24,7 +24,7 @@ const Galery = () => {
 		<>
 			<FullpageSection style={SectionStyle}>
 				<div className="container">
-					<h1 className="heading">Gallery</h1>
+					<h1 className="heading"> Gallery</h1>
 					<Swiper
 						effect={"coverflow"}
 						grabCursor={true}
