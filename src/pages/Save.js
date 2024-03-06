@@ -1,7 +1,7 @@
 import React from "react";
 import { FullpageSection } from "@ap.cx/react-fullpage";
 
-import ImageComponent from "../components/ImageComponent";
+
 
 const Save = () => {
 	const SectionStyle = {

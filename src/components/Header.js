@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import React from "react";
-import { FullpageContext } from "@ap.cx/react-fullpage";
+
 
 function Header(props) {
 	const [page, setPage] = React.useState(false);
@@ -75,16 +75,16 @@ function Header(props) {
 								Захист вiд викрадення
 							</Link>
 							<Link
-								className={isActiveLink === "/izolatsiya" ? "active" : ""}
-								to="/izolatsiya"
-								onClick={() => handleLinkClick("/izolatsiya")}
+								className={isActiveLink === "/shumoizol" ? "active" : ""}
+								to="/shumoizol"
+								onClick={() => handleLinkClick("/shumoizol")}
 							>
 								Шумо- вiбро iзоляцiя
 							</Link>
 							<Link
-								className={isActiveLink === "/plivka" ? "active" : ""}
-								to="/plivka"
-								onClick={() => handleLinkClick("/plivka")}
+								className={isActiveLink === "/zahysnaplivka" ? "active" : ""}
+								to="/zahysnaplivka"
+								onClick={() => handleLinkClick("/zahysnaplivka")}
 							>
 								Захисна плiвка i тонування
 							</Link>

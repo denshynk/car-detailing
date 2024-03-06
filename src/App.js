@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {
-	BrowserRouter as Router,
+	
 	Routes,
 	Route,
 	useLocation,
@@ -17,6 +17,10 @@ import Home from "./pages/Home";
 import Save from "./pages/Save";
 import Galery from "./pages/Galery";
 import Footer from "./components/Footer";
+import Detailing from "./pages/Detailing";
+import DopPoslugy from "./pages/DopPoslugy";
+import Shumoizol from "./pages/Shumoizol";
+import ZahysnaPlivka from "./pages/ZahysnaPlivka";
 
 function App() {
 	const location = useLocation();
@@ -48,7 +52,7 @@ function App() {
 								element={
 									<motion.div
 										key="home"
-										initial={{ opacity: 0, x: "100%" }}
+										initial={{ opacity: 1, x: "100%" }}
 										animate={{ opacity: 1, x: "0%" }}
 										exit={{ opacity: 0, x: "-100%" }}
 										transition={{ duration: 0.5 }}
@@ -62,12 +66,69 @@ function App() {
 								element={
 									<motion.div
 										key="save"
-										initial={{ opacity: 0, x: "100%" }}
+										initial={{ opacity: 1, x: "100%" }}
 										animate={{ opacity: 1, x: "0%" }}
 										exit={{ opacity: 0, x: "-100%" }}
 										transition={{ duration: 0.5 }}
 									>
 										<Save />
+									</motion.div>
+								}
+							/>
+							<Route
+								path="/detailing"
+								element={
+									<motion.div
+										key="save"
+										initial={{ opacity: 1, x: "100%" }}
+										animate={{ opacity: 1, x: "0%" }}
+										exit={{ opacity: 0, x: "-100%" }}
+										transition={{ duration: 0.5 }}
+									>
+										<Detailing />
+									</motion.div>
+								}
+							/>
+							<Route
+								path="/dopposlugy"
+								element={
+									<motion.div
+										key="save"
+										initial={{ opacity: 1, x: "100%" }}
+										animate={{ opacity: 1, x: "0%" }}
+										exit={{ opacity: 0, x: "-100%" }}
+										transition={{ duration: 0.5 }}
+									>
+										<DopPoslugy />
+									</motion.div>
+								}
+							/>
+
+							<Route
+								path="/shumoizol"
+								element={
+									<motion.div
+										key="save"
+										initial={{ opacity: 1, x: "100%" }}
+										animate={{ opacity: 1, x: "0%" }}
+										exit={{ opacity: 0, x: "-100%" }}
+										transition={{ duration: 0.5 }}
+									>
+										<Shumoizol />
+									</motion.div>
+								}
+							/>
+							<Route
+								path="/zahysnaplivka"
+								element={
+									<motion.div
+										key="save"
+										initial={{ opacity: 1, x: "100%" }}
+										animate={{ opacity: 1, x: "0%" }}
+										exit={{ opacity: 0, x: "-100%" }}
+										transition={{ duration: 0.5 }}
+									>
+										<ZahysnaPlivka />
 									</motion.div>
 								}
 							/>
